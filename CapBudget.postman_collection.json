@@ -1,0 +1,58 @@
+{
+  "info": {
+    "_postman_id": "e4371b12-728c-4428-b8b0-4d9f3d7c60ff",
+    "name": "CapBudget API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List Tables",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/list_tables",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["list_tables"]
+        }
+      }
+    },
+    {
+      "name": "Get Table Details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/get_table_details?table_name=Initial%20Investment",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["get_table_details"],
+          "query": [
+            {"key": "table_name", "value": "Initial Investment"}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Row Sum",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9090/row_sum?table_name=Initial%20Investment&row_name=Tax%20Credit%20(if%20any%20)=",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "9090",
+          "path": ["row_sum"],
+          "query": [
+            {"key": "table_name", "value": "Initial Investment"},
+            {"key": "row_name", "value": "Tax Credit (if any )="}
+          ]
+        }
+      }
+    }
+  ]
+}
